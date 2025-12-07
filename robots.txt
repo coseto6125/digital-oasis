@@ -1,0 +1,6 @@
+# robots.txt for 數位綠洲有限公司
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://coseto6125.github.io/digital-oasis/sitemap.xml
