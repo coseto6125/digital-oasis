@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://coseto6125.github.io/digital-oasis/sitemap.xml
+Sitemap: https://e-life-ai.com/sitemap.xml
