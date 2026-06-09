@@ -222,6 +222,9 @@ h1 .g::after{content:"";position:absolute;left:0;right:0;bottom:.08em;height:.09
 .land b{font-family:var(--display);font-weight:800;font-size:2.5rem;color:var(--green-d);display:block;letter-spacing:-.03em;line-height:1}
 .land p{color:var(--muted);font-size:.9rem;margin-top:14px;line-height:1.6}
 .land cite{display:block;margin-top:14px;font-family:var(--mono);font-size:.64rem;letter-spacing:.05em;color:var(--faint);font-style:normal}
+.land cite a{color:inherit;text-decoration:none;border-bottom:1px solid var(--line-strong);transition:color .2s,border-color .2s}
+.land cite a:hover{color:var(--green-d);border-color:var(--green-d)}
+.land cite a::after{content:" ↗";opacity:.6}
 .ethos-title{font-family:var(--display);font-weight:800;font-size:clamp(2.4rem,6vw,5rem);line-height:1.04;letter-spacing:-.03em;max-width:15ch}
 .ethos-title .g{color:var(--mint)}
 .ethos-pts{display:grid;grid-template-columns:repeat(3,1fr);margin-top:58px;border-top:1px solid rgba(255,255,255,.14)}
@@ -396,10 +399,10 @@ footer{position:fixed;left:0;right:0;bottom:0;z-index:80;background:rgba(245,248
       <div class="stack-block r">
         <h3 class="stack-h">威脅情勢 / Threat Landscape</h3>
         <div class="land-grid">
-          <div class="land"><b>40,000+</b><p>2024 年新揭露的 CVE 漏洞，創歷年新高。</p><cite>來源 · NVD / CVE.org</cite></div>
-          <div class="land"><b>US$4.88M</b><p>單次資料外洩的全球平均成本。</p><cite>來源 · IBM 2024</cite></div>
-          <div class="land"><b>194 天</b><p>企業平均要這麼久，才發現自己已被入侵。</p><cite>來源 · IBM 2024</cite></div>
-          <div class="land"><b>68%</b><p>的資料外洩，背後都有人為因素。</p><cite>來源 · Verizon DBIR 2024</cite></div>
+          <div class="land"><b>40,000+</b><p>2024 年新揭露的 CVE 漏洞，創歷年新高。</p><cite>來源 · <a href="https://www.nist.gov/news-events/news/2026/04/nist-updates-nvd-operations-address-record-cve-growth" target="_blank" rel="noopener noreferrer">NVD / NIST</a></cite></div>
+          <div class="land"><b>US$4.88M</b><p>單次資料外洩的全球平均成本。</p><cite>來源 · <a href="https://newsroom.ibm.com/2024-07-30-ibm-report-escalating-data-breach-disruption-pushes-costs-to-new-highs" target="_blank" rel="noopener noreferrer">IBM 2024</a></cite></div>
+          <div class="land"><b>194 天</b><p>企業平均要這麼久，才發現自己已被入侵。</p><cite>來源 · <a href="https://newsroom.ibm.com/2024-07-30-ibm-report-escalating-data-breach-disruption-pushes-costs-to-new-highs" target="_blank" rel="noopener noreferrer">IBM 2024</a></cite></div>
+          <div class="land"><b>68%</b><p>的資料外洩，背後都有人為因素。</p><cite>來源 · <a href="https://www.verizon.com/business/resources/reports/2024-dbir-data-breach-investigations-report.pdf" target="_blank" rel="noopener noreferrer">Verizon DBIR 2024</a></cite></div>
         </div>
       </div>
     </div>
