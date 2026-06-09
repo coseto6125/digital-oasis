@@ -1,90 +1,493 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="google-site-verification" content="1lEaT_ZDQ5Fubrd0i8e2aEWA25PtVI1jexiPB9OEKEk" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>數位綠洲 Digital Oasis｜Application Security</title>
+<meta name="description" content="數位綠洲提供滲透測試、源碼安全檢測、資安顧問與企業教育訓練。我們不販售恐懼，我們交付確定性。" />
+<meta name="keywords" content="數位綠洲, Digital Oasis, 資安公司, 滲透測試, 源碼安全檢測, 資安顧問, 資安教育訓練, 網路安全, 台北資安, e-shop-ai" />
+<meta name="author" content="數位綠洲有限公司" />
+<link rel="canonical" href="https://e-life-ai.com/" />
+<meta name="theme-color" content="#0e1a12" />
 
-  <!-- Primary Meta Tags -->
-  <title>數位綠洲有限公司 | 全方位資安守護者 - 滲透測試、資安顧問、系統防護</title>
-  <meta name="title" content="數位綠洲有限公司 | 全方位資安守護者" />
-  <meta name="description" content="數位綠洲提供專業資安解決方案，包括滲透測試、資安顧問、系統防護與教育訓練。保護您的數位資產，打造堅不可摧的網路堡壘。位於台北大安區，服務全台企業。" />
-  <meta name="keywords" content="數位綠洲, Digital Oasis, 資安公司, 滲透測試, 資安顧問, 網路安全, 資訊安全, 台北資安, 程式碼審計, 資安教育訓練" />
-  <meta name="author" content="數位綠洲有限公司" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://e-life-ai.com/" />
+<meta property="og:title" content="數位綠洲 Digital Oasis｜您的資安守護者" />
+<meta property="og:description" content="滲透測試、源碼安全檢測、資安顧問與企業教育訓練。我們不販售恐懼，我們交付確定性。" />
+<meta property="og:locale" content="zh_TW" />
+<meta property="og:site_name" content="數位綠洲 Digital Oasis" />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://coseto6125.github.io/digital-oasis/" />
-  <meta property="og:title" content="數位綠洲有限公司 | 全方位資安守護者" />
-  <meta property="og:description" content="專業資安解決方案，包括滲透測試、資安顧問、系統防護與教育訓練。保護您的數位資產，打造堅不可摧的網路堡壘。" />
-  <meta property="og:locale" content="zh_TW" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="數位綠洲 Digital Oasis｜您的資安守護者" />
+<meta name="twitter:description" content="滲透測試、源碼安全檢測、資安顧問與企業教育訓練。" />
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://coseto6125.github.io/digital-oasis/" />
-  <meta property="twitter:title" content="數位綠洲有限公司 | 全方位資安守護者" />
-  <meta property="twitter:description" content="專業資安解決方案，包括滲透測試、資安顧問、系統防護與教育訓練。" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230e1a12'/%3E%3Cpath d='M16 5l9 5v6c0 5.5-3.8 9.4-9 11-5.2-1.6-9-5.5-9-11v-6l9-5z' fill='none' stroke='%2346c277' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M12 16l3 3 5-6' fill='none' stroke='%2346c277' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
 
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://coseto6125.github.io/digital-oasis/" />
-
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    /* Custom scroll behavior */
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
-      background-color: #0c0a09; /* A very dark, almost black color */
-    }
-  </style>
-<script type="importmap">
+<script type="application/ld+json">
 {
-  "imports": {
-    "rxjs": "https://aistudiocdn.com/rxjs@^7.8.2?conditions=es2015",
-    "rxjs/operators": "https://aistudiocdn.com/rxjs@^7.8.2/operators?conditions=es2015",
-    "rxjs/ajax": "https://aistudiocdn.com/rxjs@^7.8.2/ajax?conditions=es2015",
-    "rxjs/webSocket": "https://aistudiocdn.com/rxjs@^7.8.2/webSocket?conditions=es2015",
-    "rxjs/testing": "https://aistudiocdn.com/rxjs@^7.8.2/testing?conditions=es2015",
-    "rxjs/fetch": "https://aistudiocdn.com/rxjs@^7.8.2/fetch?conditions=es2015",
-    "@angular/platform-browser": "https://next.esm.sh/@angular/platform-browser@^21.0.3?external=rxjs",
-    "@angular/common": "https://next.esm.sh/@angular/common@^21.0.3?external=rxjs",
-    "@angular/core": "https://next.esm.sh/@angular/core@^21.0.3?external=rxjs",
-    "@angular/compiler": "https://next.esm.sh/@angular/compiler@^21.0.3?external=rxjs"
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "數位綠洲有限公司",
+  "alternateName": "Digital Oasis Ltd.",
+  "url": "https://e-life-ai.com/",
+  "description": "專業資安解決方案，包括滲透測試、源碼安全檢測、資安顧問與企業教育訓練",
+  "email": "muse.secure@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "復興南路一段243號6樓",
+    "addressLocality": "大安區",
+    "addressRegion": "台北市",
+    "addressCountry": "TW"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "muse.secure@gmail.com",
+    "contactType": "customer service",
+    "availableLanguage": ["zh-TW", "en"]
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
-</head>
-<body class="text-gray-200 font-sans antialiased">
-  <app-root></app-root>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Noto+Sans+TC:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f8f1; --panel:#ffffff; --deep:#0e1a12; --deep2:#13241a;
+  --ink:#12211a; --muted:#56685b; --faint:#8a988a;
+  --green:#2f8f51; --green-d:#1f6e3c; --green-br:#46c277; --mint:#8ee0a8;
+  --green-soft:#e6f3ea; --line:#e0e8d9; --line-strong:#cdd8c4;
+  --display:'Outfit',sans-serif; --sans:'Noto Sans TC',sans-serif; --mono:'JetBrains Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden;padding-bottom:48px}
+@media(hover:hover){body{cursor:none}}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1240px;margin:0 auto;padding:0 40px}
+@media(max-width:680px){.wrap{padding:0 24px}}
+.mono{font-family:var(--mono)}
+/* CJK line-breaking — balanced headings, tidy paragraph rags */
+body{line-break:strict;overflow-wrap:break-word}
+h1,h2,.sec-title,.phase h3,.ethos-title,.email-link,.about h2{text-wrap:balance}
+p,.lead,.desc,.about p,.phase p,.std-list a span{text-wrap:pretty}
 
-  <!-- Structured Data for SEO -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "數位綠洲有限公司",
-    "alternateName": "Digital Oasis Ltd.",
-    "url": "https://coseto6125.github.io/digital-oasis/",
-    "description": "專業資安解決方案，包括滲透測試、資安顧問、系統防護與教育訓練",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "復興南路1段243號6樓",
-      "addressLocality": "大安區",
-      "addressRegion": "台北市",
-      "addressCountry": "TW"
-    },
-    "email": "muse.secure@gmail.com",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "email": "muse.secure@gmail.com",
-      "contactType": "customer service",
-      "availableLanguage": ["zh-TW", "en"]
-    },
-    "sameAs": []
-  }
-  </script>
+/* cursor */
+.cursor{position:fixed;top:0;left:0;z-index:200;pointer-events:none;mix-blend-mode:multiply}
+.cursor .dot{position:absolute;width:6px;height:6px;border-radius:50%;background:var(--green-d);transform:translate(-50%,-50%)}
+.cursor .ring{position:absolute;width:34px;height:34px;border:1.5px solid var(--green);border-radius:50%;transform:translate(-50%,-50%);transition:width .28s,height .28s,opacity .28s}
+@media(hover:none){.cursor{display:none}}
+
+/* progress */
+.bar{position:fixed;top:0;left:0;height:2px;width:0;background:var(--green);z-index:120}
+
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(245,248,241,.9);border-bottom:1px solid transparent;transition:border-color .3s,background .3s}
+header.scrolled{border-bottom-color:var(--line);background:rgba(245,248,241,.94)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:78px}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--display);font-weight:800;font-size:1.16rem;letter-spacing:-.01em}
+.brand .mk{width:32px;height:32px;display:flex;align-items:center;justify-content:center;border:1.5px solid var(--green);border-radius:8px}
+.brand .mk svg{width:17px;height:17px;stroke:var(--green-d);stroke-width:2}
+.brand b{color:var(--green-d)}
+.nav-right{display:flex;align-items:center;gap:38px}
+.nav-links{display:flex;gap:30px;font-family:var(--mono);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase}
+.nav-links a{color:var(--muted);display:flex;gap:7px;align-items:baseline;transition:color .25s}
+.nav-links a i{color:var(--green);font-style:normal;font-size:.66rem}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{font-family:var(--mono);font-size:.76rem;letter-spacing:.06em;text-transform:uppercase;color:var(--green-d);
+  border:1.5px solid var(--green);border-radius:30px;padding:9px 18px;transition:.25s;display:inline-flex;gap:8px;align-items:center}
+.nav-cta:hover{background:var(--green);color:#fff}
+@media(max-width:860px){.nav-links{display:none}}
+
+/* reveal — visible by default, scroll-driven enhancement */
+.r{opacity:1;transform:none}
+@keyframes rin{from{opacity:0;transform:translateY(34px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:no-preference){@supports (animation-timeline:view()){
+  .r{animation:rin .8s both;animation-timeline:view();animation-range:entry 0% entry 30%}
+}}
+
+/* section scaffold */
+section{position:relative;padding:120px 0}
+.sec-rule{border-top:1px solid var(--line-strong)}
+.sec-index{display:flex;align-items:baseline;gap:16px;font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:54px}
+.sec-index .n{color:var(--green);font-weight:600;font-size:.9rem}
+.sec-index .l{color:var(--muted)}
+
+/* ---------- HERO ---------- */
+.hero{padding:170px 0 90px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;width:680px;height:680px;border-radius:50%;right:-220px;top:-160px;z-index:0;
+  background:radial-gradient(circle,rgba(70,194,119,.13),transparent 68%)}
+.hero-grid{display:grid;grid-template-columns:1fr auto;gap:60px;align-items:center;position:relative;z-index:2}
+@media(max-width:980px){.hero-grid{grid-template-columns:1fr}.hero-mark{display:none}}
+.kick{font-family:var(--mono);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--green-d);
+  display:inline-flex;align-items:center;gap:12px;margin-bottom:30px}
+.kick::before{content:"";width:30px;height:1px;background:var(--green)}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(3rem,8vw,6.4rem);line-height:.98;letter-spacing:-.035em;margin-bottom:34px}
+h1 .g{color:var(--green-d);position:relative;white-space:nowrap}
+h1 .g::after{content:"";position:absolute;left:0;right:0;bottom:.08em;height:.09em;background:var(--green);opacity:.85}
+.lead{font-size:clamp(1.05rem,1.6vw,1.28rem);color:var(--muted);max-width:540px;line-height:1.75;margin-bottom:40px}
+.hero-actions{display:flex;gap:30px;flex-wrap:wrap;align-items:center}
+.lnk{font-family:var(--display);font-weight:600;font-size:1.02rem;display:inline-flex;align-items:center;gap:10px;padding-bottom:5px;border-bottom:2px solid var(--ink);transition:.25s}
+.lnk.green{border-color:var(--green);color:var(--green-d)}
+.lnk:hover{gap:16px}
+.lnk .ar{transition:transform .25s}
+.hero-mark{position:relative;width:300px;height:300px;display:flex;align-items:center;justify-content:center}
+.hero-mark svg{width:100%;height:100%}
+.hero-mark .ring{position:absolute;inset:-2px;border:1px solid var(--line-strong);border-radius:50%}
+.hero-mark .ring.b{inset:34px;border-style:dashed;border-color:var(--green-soft)}
+.hero-meta{display:flex;gap:0;margin-top:64px;border-top:1px solid var(--line);position:relative;z-index:2}
+.hero-meta div{flex:1;padding:22px 22px 0;border-right:1px solid var(--line)}
+.hero-meta div:last-child{border-right:none}
+.hero-meta b{display:block;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;color:var(--faint);text-transform:uppercase;margin-bottom:8px}
+.hero-meta span{font-family:var(--display);font-weight:600;font-size:1.05rem;color:var(--ink)}
+
+/* ---------- ABOUT ---------- */
+.about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:80px}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:48px}}
+.about h2{font-family:var(--display);font-weight:800;font-size:clamp(2rem,3.6vw,3.1rem);line-height:1.08;letter-spacing:-.02em;margin-bottom:8px}
+.about h2 .g{color:var(--green-d)}
+.about p{color:var(--muted);font-size:1.05rem;margin-top:22px;max-width:520px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line-strong);border-left:1px solid var(--line-strong)}
+.stat{padding:34px 30px;border-bottom:1px solid var(--line-strong);border-right:1px solid var(--line-strong);transition:background .3s}
+.stat:hover{background:var(--green-soft)}
+.stat b{font-family:var(--display);font-weight:800;font-size:2.9rem;color:var(--green-d);display:block;letter-spacing:-.03em;line-height:1}
+.stat span{color:var(--muted);font-size:.92rem;display:block;margin-top:12px}
+
+/* ---------- SERVICES (editorial rows) ---------- */
+.svc-list{border-top:1px solid var(--line-strong)}
+.svc-row{display:grid;grid-template-columns:80px 1fr 1.2fr 60px;gap:30px;align-items:center;padding:40px 8px;
+  border-bottom:1px solid var(--line-strong);position:relative;transition:padding .35s,background .35s}
+.svc-row .idx{font-family:var(--mono);font-size:.82rem;color:var(--green);font-weight:600}
+.svc-row .ttl{font-family:var(--display);font-weight:700;font-size:1.7rem;letter-spacing:-.01em;display:flex;flex-direction:column;gap:6px}
+.svc-row .ttl small{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;color:var(--faint);font-weight:500}
+.svc-row .ico{width:46px;height:46px;border:1.5px solid var(--line-strong);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;transition:.35s}
+.svc-row .desc{color:var(--muted);font-size:1rem;line-height:1.7}
+.svc-row .ar{justify-self:end;color:var(--faint);transition:.35s;opacity:0;transform:translateX(-8px)}
+.svc-row::before{content:"";position:absolute;left:0;top:0;bottom:0;width:0;background:var(--green-soft);z-index:-1;transition:width .4s cubic-bezier(.2,.7,.2,1)}
+.svc-row:hover{padding-left:26px}
+.svc-row:hover::before{width:100%}
+.svc-row:hover .ico{border-color:var(--green);background:var(--green);}
+.svc-row:hover .ico svg{stroke:#fff}
+.svc-row:hover .ar{opacity:1;transform:none;color:var(--green-d)}
+.svc-row .ico svg{width:23px;height:23px;stroke:var(--green-d);stroke-width:2;transition:stroke .35s}
+@media(max-width:780px){.svc-row{grid-template-columns:46px 1fr;gap:16px}.svc-row .desc{grid-column:1/-1}.svc-row .ar{display:none}}
+
+/* ---------- PRODUCT (dark editorial band) ---------- */
+.product{background:var(--deep);color:#e9f4ec;border-radius:0;margin-top:0}
+.product .wrap{padding-top:110px;padding-bottom:110px}
+.product .sec-index{color:rgba(233,244,236,.5)}
+.product .sec-index .l{color:rgba(233,244,236,.7)}
+/* ---------- CONTACT ---------- */
+.contact .lead{max-width:560px;margin-bottom:50px}
+.email-link{font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,5vw,4rem);letter-spacing:-.03em;color:var(--ink);
+  display:inline-flex;align-items:center;gap:.3em;line-height:1;border-bottom:3px solid var(--green);padding-bottom:.12em;transition:color .3s}
+.email-link:hover{color:var(--green-d)}
+.email-link .ar{font-size:.6em;color:var(--green)}
+.contact-meta{display:grid;grid-template-columns:repeat(2,1fr);max-width:760px;gap:30px;margin-top:70px;border-top:1px solid var(--line-strong);padding-top:34px}
+@media(max-width:680px){.contact-meta{grid-template-columns:1fr;gap:22px}}
+.contact-meta b{display:block;font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;color:var(--green-d);text-transform:uppercase;margin-bottom:8px}
+.contact-meta span{font-family:var(--display);font-weight:500;color:var(--ink);font-size:1.02rem}
+
+.method-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line-strong);border-left:1px solid var(--line-strong)}
+@media(max-width:860px){.method-grid{grid-template-columns:1fr}}
+.phase{padding:34px 30px;border-bottom:1px solid var(--line-strong);border-right:1px solid var(--line-strong);transition:background .3s}
+.phase:hover{background:var(--green-soft)}
+.phase .pn{font-family:var(--mono);font-size:.8rem;color:var(--green);font-weight:600}
+.phase h3{font-family:var(--display);font-weight:700;font-size:1.26rem;margin:14px 0 10px;letter-spacing:-.01em}
+.phase h3 small{display:block;font-family:var(--mono);font-size:.64rem;letter-spacing:.12em;color:var(--faint);font-weight:500;margin-top:6px}
+.phase p{color:var(--muted);font-size:.94rem;line-height:1.65}
+.phase .std{display:inline-block;margin-top:16px;font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;color:var(--green-d);border:1px solid var(--green-line);border-radius:20px;padding:4px 11px}
+.stack-block + .stack-block{margin-top:60px}
+.stack-h{font-family:var(--mono);font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:26px;display:flex;align-items:center;gap:14px}
+.stack-h::after{content:"";flex:1;height:1px;background:var(--line-strong)}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips a{font-family:var(--mono);font-size:.82rem;color:var(--ink);border:1px solid var(--line-strong);border-radius:30px;padding:9px 16px;transition:.22s;display:inline-flex;align-items:center;gap:9px}
+.chips a::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--green);opacity:.55;transition:.22s}
+.chips a:hover{border-color:var(--green);color:var(--green-d);background:var(--green-soft)}
+.chips a:hover::before{opacity:1}
+.chips a.weak{text-decoration:line-through;text-decoration-color:var(--green-d);text-decoration-thickness:1.5px;opacity:.5}
+.chips a.weak:hover{opacity:.8}
+.std-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line-strong);border-left:1px solid var(--line-strong)}
+@media(max-width:860px){.std-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.std-grid{grid-template-columns:1fr}}
+.std-grid a{padding:24px 20px;border-bottom:1px solid var(--line-strong);border-right:1px solid var(--line-strong);display:flex;flex-direction:column;gap:7px;transition:background .25s}
+.std-grid a:hover{background:var(--green-soft)}
+.std-grid a b{font-family:var(--display);font-weight:600;font-size:1.04rem;color:var(--ink);letter-spacing:-.01em}
+.std-grid a span{font-family:var(--sans);font-size:.82rem;color:var(--muted)}
+.land-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line-strong);border-left:1px solid var(--line-strong)}
+@media(max-width:860px){.land-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.land-grid{grid-template-columns:1fr}}
+.land{padding:32px 24px;border-bottom:1px solid var(--line-strong);border-right:1px solid var(--line-strong);transition:background .25s}
+.land:hover{background:var(--green-soft)}
+.land b{font-family:var(--display);font-weight:800;font-size:2.5rem;color:var(--green-d);display:block;letter-spacing:-.03em;line-height:1}
+.land p{color:var(--muted);font-size:.9rem;margin-top:14px;line-height:1.6}
+.land cite{display:block;margin-top:14px;font-family:var(--mono);font-size:.64rem;letter-spacing:.05em;color:var(--faint);font-style:normal}
+.ethos-title{font-family:var(--display);font-weight:800;font-size:clamp(2.4rem,6vw,5rem);line-height:1.04;letter-spacing:-.03em;max-width:15ch}
+.ethos-title .g{color:var(--mint)}
+.ethos-pts{display:grid;grid-template-columns:repeat(3,1fr);margin-top:58px;border-top:1px solid rgba(255,255,255,.14)}
+.ethos-pts span{font-family:var(--mono);font-size:.82rem;letter-spacing:.1em;color:#cfe3d6;padding:24px 0 0;border-right:1px solid rgba(255,255,255,.14);text-align:center}
+.ethos-pts span:last-child{border-right:none}
+@media(max-width:680px){.ethos-pts{grid-template-columns:1fr}.ethos-pts span{border-right:none;border-bottom:1px solid rgba(255,255,255,.14);padding:16px 0;text-align:left}}
+footer{position:fixed;left:0;right:0;bottom:0;z-index:80;background:rgba(245,248,241,.95);border-top:1px solid var(--line-strong)}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:20px;height:48px;font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;color:var(--muted)}
+.foot .cprt{white-space:nowrap}
+.foot .finfo{display:flex;align-items:center;gap:18px;min-width:0}
+.foot .finfo a{color:var(--green-d);transition:color .2s}
+.foot .finfo a:hover{color:var(--green)}
+.foot .addr{position:relative;padding-left:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.foot .addr::before{content:"";position:absolute;left:0;top:50%;width:4px;height:4px;border-radius:50%;background:var(--faint);transform:translateY(-50%)}
+@media(max-width:720px){.foot .addr{display:none}.foot .cprt{font-size:.66rem}}
+</style>
+</head>
+<body>
+<div class="bar" id="bar"></div>
+<div class="cursor"><span class="ring"></span><span class="dot"></span></div>
+
+<header id="header">
+  <div class="wrap nav">
+    <a href="#top" class="brand" data-c><span class="mk"><svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3l7 4v5c0 4.4-3 7.5-7 9-4-1.5-7-4.6-7-9V7l7-4z"/></svg></span><span><b>數位</b>綠洲</span></a>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a data-c href="#about"><i>01</i>關於</a>
+        <a data-c href="#services"><i>02</i>服務</a>
+        <a data-c href="#method"><i>03</i>方法</a>
+        <a data-c href="#stack"><i>04</i>工具</a>
+        <a data-c href="#contact"><i>05</i>聯絡</a>
+      </nav>
+      <a class="nav-cta" data-c href="#contact">取得諮詢 →</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy r">
+          <span class="kick">Application Security · 台灣 Taipei</span>
+          <h1>您的<span class="g">資安守護者</span><br>安穩，是一種選擇</h1>
+          <p class="lead">我們以攻擊者的視角檢視防禦，<br>把每一個未知風險，化為你能掌握的確定。</p>
+          <div class="hero-actions">
+            <a class="lnk green" data-c href="#services">探索我們的服務 <span class="ar">→</span></a>
+            <a class="lnk" data-c href="#ethos">我們的信念 <span class="ar">→</span></a>
+          </div>
+        </div>
+        <div class="hero-mark" aria-hidden="true">
+          <span class="ring"></span><span class="ring b"></span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="url(#gg)" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round">
+            <defs><linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#46c277"/><stop offset="1" stop-color="#1f6e3c"/></linearGradient></defs>
+            <path d="M12 3l7 4v5c0 4.4-3 7.5-7 9-4-1.5-7-4.6-7-9V7l7-4z"/>
+            <path d="M9 12l2 2 4-4" stroke-width="1.1"/>
+          </svg>
+        </div>
+      </div>
+      <div class="hero-meta r">
+        <div><b>EST.</b><span>2025 · Taipei</span></div>
+        <div><b>Focus</b><span>攻防 / 源碼 / 顧問</span></div>
+        <div><b>Contact</b><span>muse.secure</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="sec-rule">
+    <div class="wrap about">
+      <div class="sec-index r"><span class="n">01</span><span class="l">About — 關於數位綠洲</span></div>
+      <div class="about-grid">
+        <div class="r">
+          <h2>在資安的荒漠中，<br>成為您的<span class="g">綠洲</span>。</h2>
+          <p>數位威脅無孔不入，而我們存在的意義，是讓您的數位資產在風暴中依然安穩。數位綠洲由一群熱愛攻防的資安專家組成，以攻擊者的視角審視防禦，以工程師的嚴謹修補缺口。</p>
+          <p>我們不販售恐懼，我們交付確定性：可驗證的漏洞、可執行的修補，以及可持續的防禦文化。</p>
+        </div>
+        <div class="stats r">
+          <div class="stat"><b data-count="360" data-suffix="°">360°</b><span>全方位攻防視角</span></div>
+          <div class="stat"><b>0day</b><span>持續追蹤新興威脅</span></div>
+          <div class="stat"><b data-count="100" data-suffix="%">100%</b><span>客製化資安策略</span></div>
+          <div class="stat"><b>24/7</b><span>資安顧問支援</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="sec-rule">
+    <div class="wrap">
+      <div class="sec-index r"><span class="n">02</span><span class="l">Services — 四大資安服務</span></div>
+      <div class="svc-list">
+        <div class="svc-row" data-c>
+          <span class="idx">/01</span>
+          <div class="ttl"><span class="ico"><svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3l7 4v5c0 4.4-3 7.5-7 9-4-1.5-7-4.6-7-9V7l7-4z"/></svg></span>滲透測試<small>PENETRATION TESTING</small></div>
+          <p class="desc">模擬真實駭客攻擊，深入挖掘系統與應用程式的潛在漏洞，提供詳盡的修補建議，防患於未然。</p>
+          <span class="ar"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+        <div class="svc-row" data-c>
+          <span class="idx">/02</span>
+          <div class="ttl"><span class="ico"><svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 9l-4 3 4 3M16 9l4 3-4 3M14 5l-4 14"/></svg></span>源碼安全檢測<small>CODE AUDIT</small></div>
+          <p class="desc">從開發源頭把關，檢測原始碼中的安全缺陷與邏輯漏洞，確保軟體產品具備天生的安全基因。</p>
+          <span class="ar"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+        <div class="svc-row" data-c>
+          <span class="idx">/03</span>
+          <div class="ttl"><span class="ico"><svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM3 21v-1a6 6 0 016-6h6a6 6 0 016 6v1"/></svg></span>專業資安顧問<small>SECURITY CONSULTING</small></div>
+          <p class="desc">提供客製化的資安策略規劃、合規性評估與架構設計，成為您最信賴的資安技術夥伴。</p>
+          <span class="ar"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+        <div class="svc-row" data-c>
+          <span class="idx">/04</span>
+          <div class="ttl"><span class="ico"><svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4L3 9l9 5 9-5-9-5zM3 9v6m18-6v6M7 12v4c0 1 2 2 5 2s5-1 5-2v-4"/></svg></span>企業教育訓練<small>SECURITY TRAINING</small></div>
+          <p class="desc">為您的團隊量身打造資安意識與實戰技術課程，全面提升組織的資安防禦能力與文化。</p>
+          <span class="ar"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- METHODOLOGY -->
+  <section id="method" class="sec-rule">
+    <div class="wrap">
+      <div class="sec-index r"><span class="n">03</span><span class="l">Methodology — 我們如何作戰</span></div>
+      <div class="method-grid r">
+        <div class="phase"><span class="pn">/01</span><h3>偵察與情蒐<small>RECONNAISSANCE</small></h3><p>資產盤點、攻擊面測繪，從外部視角理解你真正的暴露範圍。</p><span class="std">OSINT</span></div>
+        <div class="phase"><span class="pn">/02</span><h3>威脅建模<small>THREAT MODELING</small></h3><p>以攻擊者視角排序風險，鎖定最可能被打穿的路徑。</p><span class="std">MITRE ATT&amp;CK</span></div>
+        <div class="phase"><span class="pn">/03</span><h3>漏洞利用<small>EXPLOITATION</small></h3><p>驗證可被真實利用的漏洞，而非僅止於掃描器的警告。</p><span class="std">OWASP · PTES</span></div>
+        <div class="phase"><span class="pn">/04</span><h3>後滲透與橫向<small>POST-EXPLOITATION</small></h3><p>評估一旦被突破，攻擊者能造成的縱深影響範圍。</p><span class="std">ATT&amp;CK</span></div>
+        <div class="phase"><span class="pn">/05</span><h3>報告與修補<small>REPORTING</small></h3><p>可執行的修補建議與優先序，附帶可重現的重點步驟。</p><span class="std">CVSS · CWE</span></div>
+        <div class="phase"><span class="pn">/06</span><h3>複測驗證<small>RETEST</small></h3><p>修補後再次驗證，確認漏洞確實關閉、不留死角。</p><span class="std">Verify</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section id="stack" class="sec-rule">
+    <div class="wrap">
+      <div class="sec-index r"><span class="n">04</span><span class="l">Toolchain &amp; Standards — 工具與標準</span></div>
+      <div class="stack-block r">
+        <h3 class="stack-h">工具鏈 / Toolchain</h3>
+        <div class="chips">
+          <a data-c target="_blank" rel="noopener" href="https://portswigger.net/burp">Burp Suite</a>
+          <a data-c class="weak" target="_blank" rel="noopener" href="https://www.zaproxy.org/">OWASP ZAP</a>
+          <a data-c class="weak" target="_blank" rel="noopener" href="https://www.metasploit.com/">Metasploit</a>
+          <a data-c target="_blank" rel="noopener" href="https://nmap.org/">Nmap</a>
+          <a data-c target="_blank" rel="noopener" href="https://github.com/projectdiscovery/nuclei">Nuclei</a>
+          <a data-c target="_blank" rel="noopener" href="https://semgrep.dev/">Semgrep</a>
+          <a data-c target="_blank" rel="noopener" href="https://sqlmap.org/">sqlmap</a>
+          <a data-c target="_blank" rel="noopener" href="https://github.com/ffuf/ffuf">ffuf</a>
+          <a data-c target="_blank" rel="noopener" href="https://www.wireshark.org/">Wireshark</a>
+          <a data-c target="_blank" rel="noopener" href="https://ghidra-sre.org/">Ghidra</a>
+          <a data-c target="_blank" rel="noopener" href="https://github.com/aquasecurity/trivy">Trivy</a>
+          <a data-c target="_blank" rel="noopener" href="https://github.com/BloodHoundAD/BloodHound">BloodHound</a>
+          <a data-c target="_blank" rel="noopener" href="https://hashcat.net/hashcat/">Hashcat</a>
+        </div>
+      </div>
+      <div class="stack-block r">
+        <h3 class="stack-h">對齊標準 / Standards</h3>
+        <div class="std-grid">
+          <a data-c target="_blank" rel="noopener" href="https://owasp.org/www-project-top-ten/"><b>OWASP Top 10</b><span>Web 風險基準</span></a>
+          <a data-c target="_blank" rel="noopener" href="https://owasp.org/www-project-application-security-verification-standard/"><b>OWASP ASVS</b><span>應用驗證標準</span></a>
+          <a data-c target="_blank" rel="noopener" href="https://attack.mitre.org/"><b>MITRE ATT&amp;CK</b><span>戰術知識庫</span></a>
+          <a data-c target="_blank" rel="noopener" href="http://www.pentest-standard.org/"><b>PTES</b><span>滲透測試流程</span></a>
+          <a data-c target="_blank" rel="noopener" href="https://csrc.nist.gov/pubs/sp/800/115/final"><b>NIST SP 800-115</b><span>技術評估指南</span></a>
+          <a data-c target="_blank" rel="noopener" href="https://cwe.mitre.org/"><b>CWE / CVE</b><span>弱點與漏洞編目</span></a>
+          <a data-c target="_blank" rel="noopener" href="https://www.cisecurity.org/cis-benchmarks"><b>CIS Benchmarks</b><span>系統強化基準</span></a>
+          <a data-c target="_blank" rel="noopener" href="https://www.iso.org/standard/27001"><b>ISO/IEC 27001</b><span>資安管理制度</span></a>
+        </div>
+      </div>
+      <div class="stack-block r">
+        <h3 class="stack-h">威脅情勢 / Threat Landscape</h3>
+        <div class="land-grid">
+          <div class="land"><b>40,000+</b><p>2024 年新揭露的 CVE 漏洞，創歷年新高。</p><cite>來源 · NVD / CVE.org</cite></div>
+          <div class="land"><b>US$4.88M</b><p>單次資料外洩的全球平均成本。</p><cite>來源 · IBM 2024</cite></div>
+          <div class="land"><b>194 天</b><p>企業平均要這麼久，才發現自己已被入侵。</p><cite>來源 · IBM 2024</cite></div>
+          <div class="land"><b>68%</b><p>的資料外洩，背後都有人為因素。</p><cite>來源 · Verizon DBIR 2024</cite></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ETHOS -->
+  <section id="ethos" class="product">
+    <div class="wrap">
+      <div class="sec-index r"><span class="n">—</span><span class="l">Ethos — 我們的信念</span></div>
+      <h2 class="ethos-title r">我們不販售<span class="g">恐懼</span>，<br>我們交付<span class="g">確定性</span>。</h2>
+      <div class="ethos-pts r"><span>可驗證的漏洞</span><span>可執行的修補</span><span>可持續的防禦文化</span></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact sec-rule">
+    <div class="wrap">
+      <div class="sec-index r"><span class="n">05</span><span class="l">Contact — 聯絡我們</span></div>
+      <h2 class="r" style="font-family:var(--display);font-weight:800;font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.02em;line-height:1.1;margin-bottom:24px">準備好強化您的防線了嗎？</h2>
+      <p class="lead r">無論是一次滲透測試，還是長期資安夥伴關係，我們都樂意為您量身打造。</p>
+      <a class="email-link r" href="mailto:muse.secure@gmail.com">muse.secure@gmail.com <span class="ar">→</span></a>
+      <div class="contact-meta r">
+        <div><b>Email</b><span><a href="mailto:muse.secure@gmail.com">muse.secure@gmail.com</a></span></div>
+        <div><b>Address</b><span>台北市大安區復興南路一段243號6樓</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span class="cprt">© <span id="yr">2026</span> 數位綠洲 Digital Oasis Ltd.</span>
+    <span class="finfo">
+      <a href="mailto:muse.secure@gmail.com">muse.secure@gmail.com</a>
+      <span class="addr">台北市大安區復興南路一段243號6樓</span>
+    </span>
+  </div>
+</footer>
+
+<script>
+/* cursor — rAF only while the ring is catching up (idles when still) */
+const cur=document.querySelector('.cursor'),ring=cur.querySelector('.ring'),dot=cur.querySelector('.dot');
+let cx=innerWidth/2,cy=innerHeight/2,rx=cx,ry=cy,curOn=false;
+function curStep(){
+  rx+=(cx-rx)*.2;ry+=(cy-ry)*.2;
+  ring.style.transform=`translate(${rx}px,${ry}px) translate(-50%,-50%)`;
+  if(Math.abs(cx-rx)>.4||Math.abs(cy-ry)>.4)requestAnimationFrame(curStep);else curOn=false;
+}
+addEventListener('mousemove',e=>{
+  cx=e.clientX;cy=e.clientY;
+  dot.style.transform=`translate(${cx}px,${cy}px) translate(-50%,-50%)`;
+  if(!curOn){curOn=true;requestAnimationFrame(curStep);}
+},{passive:true});
+document.querySelectorAll('[data-c]').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{ring.style.width='58px';ring.style.height='58px';ring.style.opacity='.7';});
+  el.addEventListener('mouseleave',()=>{ring.style.width='34px';ring.style.height='34px';ring.style.opacity='1';});
+});
+
+/* scroll — single rAF-throttled pass; page height cached */
+const header=document.getElementById('header'),bar=document.getElementById('bar');
+let maxScroll=0;
+function calcMax(){maxScroll=document.documentElement.scrollHeight-innerHeight;}
+addEventListener('resize',calcMax,{passive:true});addEventListener('load',calcMax);calcMax();
+
+function countUp(el){const to=+el.dataset.count,suf=el.dataset.suffix||'';let s=null;
+  (function st(ts){if(!s)s=ts;const k=Math.min(1,(ts-s)/1300),e=1-Math.pow(1-k,3);
+    el.textContent=Math.round(to*e)+suf;if(k<1)requestAnimationFrame(st);})(performance.now());}
+let counts=[...document.querySelectorAll('[data-count]')];
+function inView(el,f){const r=el.getBoundingClientRect();return r.top<innerHeight*f&&r.bottom>0;}
+
+let ticking=false;
+function frame(){
+  const y=window.scrollY;
+  bar.style.width=(maxScroll>0?y/maxScroll*100:0)+'%';
+  header.classList.toggle('scrolled',y>16);
+  if(counts.length) counts=counts.filter(el=>{if(inView(el,.82)){countUp(el);return false;}return true;});
+  ticking=false;
+}
+addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(frame);}},{passive:true});
+requestAnimationFrame(frame);setTimeout(frame,300);
+
+/* magnetic nav CTA */
+document.querySelectorAll('.nav-cta').forEach(b=>{
+  b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();
+    b.style.transform=`translate(${(e.clientX-(r.left+r.width/2))*.2}px,${(e.clientY-(r.top+r.height/2))*.3}px)`;});
+  b.addEventListener('mouseleave',()=>b.style.transform='');
+});
+
+document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
 </body>
 </html>
