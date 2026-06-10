@@ -50,7 +50,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Noto+Sans+TC:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Noto+Sans+TC:wght@400;500;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#f5f8f1; --panel:#ffffff; --deep:#0e1a12; --deep2:#13241a;
@@ -62,7 +62,10 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden;padding-bottom:48px}
-@media(hover:hover){body{cursor:none}}
+@media(hover:hover){body,a,button,[data-c]{cursor:none}}
+:focus-visible{outline:2px solid var(--green-d);outline-offset:3px;border-radius:2px}
+.skip{position:fixed;top:-64px;left:16px;z-index:300;background:var(--deep);color:#e9f4ec;font-family:var(--mono);font-size:.78rem;padding:10px 16px;border-radius:8px;transition:top .25s}
+.skip:focus{top:12px}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1240px;margin:0 auto;padding:0 40px}
 @media(max-width:680px){.wrap{padding:0 24px}}
@@ -99,6 +102,19 @@ header.scrolled{border-bottom-color:var(--line);background:rgba(245,248,241,.94)
 .nav-cta:hover{background:var(--green);color:#fff}
 @media(max-width:860px){.nav-links{display:none}}
 
+/* mobile nav */
+.nav-toggle{display:none;font-family:var(--mono);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--green-d);background:none;border:none;padding:8px 2px}
+.nav-toggle::after{content:"↓";display:inline-block;margin-left:7px;transition:transform .3s}
+.nav-toggle[aria-expanded="true"]::after{transform:rotate(180deg)}
+@media(max-width:860px){.nav-toggle{display:inline-block}}
+.mnav{position:fixed;top:78px;left:0;right:0;z-index:99;background:rgba(245,248,241,.97);backdrop-filter:blur(8px);
+  border-bottom:1px solid transparent;max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.2,.7,.2,1),border-color .4s}
+.mnav.open{max-height:360px;border-bottom-color:var(--line-strong)}
+.mnav a{display:flex;gap:14px;align-items:baseline;padding:15px 40px;font-family:var(--display);font-weight:700;font-size:1.18rem;border-top:1px solid var(--line)}
+.mnav a i{font-family:var(--mono);font-style:normal;font-size:.68rem;color:var(--green)}
+@media(min-width:861px){.mnav{display:none}}
+@media(max-width:680px){.mnav a{padding:15px 24px}}
+
 /* reveal — visible by default, scroll-driven enhancement */
 .r{opacity:1;transform:none}
 @keyframes rin{from{opacity:0;transform:translateY(34px)}to{opacity:1;transform:none}}
@@ -118,7 +134,7 @@ section{position:relative;padding:120px 0}
 .hero::after{content:"";position:absolute;width:680px;height:680px;border-radius:50%;right:-220px;top:-160px;z-index:0;
   background:radial-gradient(circle,rgba(70,194,119,.13),transparent 68%)}
 .hero-grid{display:grid;grid-template-columns:1fr auto;gap:60px;align-items:center;position:relative;z-index:2}
-@media(max-width:980px){.hero-grid{grid-template-columns:1fr}.hero-mark{display:none}}
+@media(max-width:980px){.hero-grid{grid-template-columns:1fr}.hero-grid .hero-mark{display:none}}
 .kick{font-family:var(--mono);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--green-d);
   display:inline-flex;align-items:center;gap:12px;margin-bottom:30px}
 .kick::before{content:"";width:30px;height:1px;background:var(--green)}
@@ -140,6 +156,51 @@ h1 .g::after{content:"";position:absolute;left:0;right:0;bottom:.08em;height:.09
 .hero-meta div:last-child{border-right:none}
 .hero-meta b{display:block;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;color:var(--faint);text-transform:uppercase;margin-bottom:8px}
 .hero-meta span{font-family:var(--display);font-weight:600;font-size:1.05rem;color:var(--ink)}
+
+/* ---------- 綠洲光影 oasis light ---------- */
+/* 樹影光斑：陽光穿過樹冠灑落的柔和光點，緩慢漂移 */
+.dapple{position:absolute;inset:-60px;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(240px 170px at 16% 24%,rgba(70,194,119,.11),transparent 70%),
+    radial-gradient(320px 230px at 70% 10%,rgba(142,224,168,.13),transparent 70%),
+    radial-gradient(190px 150px at 86% 52%,rgba(70,194,119,.09),transparent 70%),
+    radial-gradient(280px 210px at 38% 72%,rgba(142,224,168,.10),transparent 70%);
+  filter:blur(20px)}
+.dapple.b{background:
+    radial-gradient(200px 150px at 30% 40%,rgba(142,224,168,.08),transparent 70%),
+    radial-gradient(260px 190px at 80% 70%,rgba(70,194,119,.07),transparent 70%)}
+/* 棕櫚葉影：模糊剪影在角落輕搖 */
+.frond{position:absolute;top:-46px;right:-36px;width:430px;height:430px;z-index:0;pointer-events:none;
+  opacity:.06;filter:blur(7px);transform-origin:top right}
+.frond.flip{right:auto;left:-60px;top:auto;bottom:-80px;transform:scaleX(-1) rotate(8deg);transform-origin:bottom left;width:340px;height:340px;opacity:.045}
+/* 林冠光束：深色帶內透下的微光 */
+.cray{position:absolute;top:-30%;width:170px;height:160%;pointer-events:none;
+  background:linear-gradient(to bottom,rgba(142,224,168,.10),rgba(142,224,168,.03) 55%,transparent 85%);
+  filter:blur(26px);transform:rotate(16deg)}
+.cray.b{width:110px;transform:rotate(22deg)}
+.hero-mark::before{content:"";position:absolute;inset:18%;border-radius:50%;z-index:-1;
+  background:radial-gradient(circle,rgba(142,224,168,.28),transparent 70%);filter:blur(14px)}
+@media (prefers-reduced-motion:no-preference){
+  .dapple{animation:dapple-drift 18s ease-in-out infinite alternate}
+  .dapple.b{animation:dapple-drift 24s ease-in-out infinite alternate-reverse}
+  .frond{animation:frond-sway 9s ease-in-out infinite alternate}
+  .frond.flip{animation:frond-sway-flip 12s ease-in-out infinite alternate}
+  .cray{animation:cray-sway 14s ease-in-out infinite alternate}
+  .cray.b{animation-duration:18s;animation-delay:-6s}
+  .hero-mark{animation:mark-bob 7s ease-in-out infinite alternate}
+  .hero-mark .ring.b{animation:mark-spin 70s linear infinite}
+  .hero-mark::before{animation:glow-breathe 6s ease-in-out infinite alternate}
+  h1 .g::after{background:linear-gradient(90deg,var(--green) 10%,var(--mint) 50%,var(--green) 90%);
+    background-size:220% 100%;animation:glint 6s ease-in-out infinite}
+}
+@keyframes dapple-drift{from{transform:translate3d(-14px,-10px,0) scale(1)}to{transform:translate3d(18px,12px,0) scale(1.07)}}
+@keyframes frond-sway{from{transform:rotate(-2.4deg)}to{transform:rotate(2.6deg)}}
+@keyframes frond-sway-flip{from{transform:scaleX(-1) rotate(6deg)}to{transform:scaleX(-1) rotate(10.5deg)}}
+@keyframes cray-sway{from{transform:rotate(13deg) translateX(-26px);opacity:.55}to{transform:rotate(19deg) translateX(30px);opacity:1}}
+@keyframes mark-bob{from{transform:translateY(-6px)}to{transform:translateY(8px)}}
+@keyframes mark-spin{to{transform:rotate(360deg)}}
+@keyframes glow-breathe{from{opacity:.5;transform:scale(.94)}to{opacity:1;transform:scale(1.08)}}
+@keyframes glint{0%,100%{background-position:0% 0}50%{background-position:100% 0}}
 
 /* ---------- ABOUT ---------- */
 .about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:80px}
@@ -173,11 +234,12 @@ h1 .g::after{content:"";position:absolute;left:0;right:0;bottom:.08em;height:.09
 @media(max-width:780px){.svc-row{grid-template-columns:46px 1fr;gap:16px}.svc-row .desc{grid-column:1/-1}.svc-row .ar{display:none}}
 
 /* ---------- PRODUCT (dark editorial band) ---------- */
-.product{background:var(--deep);color:#e9f4ec;border-radius:0;margin-top:0}
+.product{background:var(--deep);color:#e9f4ec;border-radius:0;margin-top:0;overflow:hidden}
 .product .wrap{padding-top:110px;padding-bottom:110px}
 .product .sec-index{color:rgba(233,244,236,.5)}
 .product .sec-index .l{color:rgba(233,244,236,.7)}
 /* ---------- CONTACT ---------- */
+.contact{overflow:hidden}
 .contact .lead{max-width:560px;margin-bottom:50px}
 .email-link{font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,5vw,4rem);letter-spacing:-.03em;color:var(--ink);
   display:inline-flex;align-items:center;gap:.3em;line-height:1;border-bottom:3px solid var(--green);padding-bottom:.12em;transition:color .3s}
@@ -243,6 +305,7 @@ footer{position:fixed;left:0;right:0;bottom:0;z-index:80;background:rgba(245,248
 </style>
 </head>
 <body>
+<a class="skip" href="#top">跳至主要內容</a>
 <div class="bar" id="bar"></div>
 <div class="cursor"><span class="ring"></span><span class="dot"></span></div>
 
@@ -257,14 +320,39 @@ footer{position:fixed;left:0;right:0;bottom:0;z-index:80;background:rgba(245,248
         <a data-c href="#stack"><i>04</i>工具</a>
         <a data-c href="#contact"><i>05</i>聯絡</a>
       </nav>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mnav" aria-label="開啟選單">Menu</button>
       <a class="nav-cta" data-c href="#contact">取得諮詢 →</a>
     </div>
   </div>
 </header>
+<nav class="mnav" id="mnav" aria-label="行動版選單">
+  <a href="#about"><i>01</i>關於</a>
+  <a href="#services"><i>02</i>服務</a>
+  <a href="#method"><i>03</i>方法</a>
+  <a href="#stack"><i>04</i>工具</a>
+  <a href="#contact"><i>05</i>聯絡</a>
+</nav>
 
 <main id="top">
   <!-- HERO -->
   <section class="hero">
+    <div class="dapple" aria-hidden="true"></div>
+    <svg class="frond" viewBox="0 0 200 200" aria-hidden="true" fill="none" stroke="#0e1a12" stroke-width="5" stroke-linecap="round">
+      <path d="M14 186C58 152 116 96 184 18" stroke-width="6"/>
+      <path d="M38 162Q22 138 16 116"/><path d="M38 162Q60 174 80 180"/>
+      <path d="M64 136Q50 112 46 90"/><path d="M64 136Q86 146 106 150"/>
+      <path d="M90 110Q78 88 76 66"/><path d="M90 110Q112 118 130 120"/>
+      <path d="M114 84Q104 64 104 44"/><path d="M114 84Q134 90 152 90"/>
+      <path d="M138 58Q132 42 134 24"/><path d="M138 58Q156 62 170 60"/>
+      <path d="M160 36Q158 24 162 10"/><path d="M160 36Q174 38 186 34"/>
+    </svg>
+    <svg class="frond flip" viewBox="0 0 200 200" aria-hidden="true" fill="none" stroke="#0e1a12" stroke-width="5" stroke-linecap="round">
+      <path d="M14 186C58 152 116 96 184 18" stroke-width="6"/>
+      <path d="M38 162Q22 138 16 116"/><path d="M38 162Q60 174 80 180"/>
+      <path d="M64 136Q50 112 46 90"/><path d="M64 136Q86 146 106 150"/>
+      <path d="M90 110Q78 88 76 66"/><path d="M90 110Q112 118 130 120"/>
+      <path d="M114 84Q104 64 104 44"/><path d="M114 84Q134 90 152 90"/>
+    </svg>
     <div class="wrap">
       <div class="hero-grid">
         <div class="hero-copy r">
@@ -410,6 +498,8 @@ footer{position:fixed;left:0;right:0;bottom:0;z-index:80;background:rgba(245,248
 
   <!-- ETHOS -->
   <section id="ethos" class="product">
+    <div class="cray" style="left:22%" aria-hidden="true"></div>
+    <div class="cray b" style="left:58%" aria-hidden="true"></div>
     <div class="wrap">
       <div class="sec-index r"><span class="n">—</span><span class="l">Ethos — 我們的信念</span></div>
       <h2 class="ethos-title r">我們不販售<span class="g">恐懼</span>，<br>我們交付<span class="g">確定性</span>。</h2>
@@ -419,6 +509,7 @@ footer{position:fixed;left:0;right:0;bottom:0;z-index:80;background:rgba(245,248
 
   <!-- CONTACT -->
   <section id="contact" class="contact sec-rule">
+    <div class="dapple b" aria-hidden="true"></div>
     <div class="wrap">
       <div class="sec-index r"><span class="n">05</span><span class="l">Contact — 聯絡我們</span></div>
       <h2 class="r" style="font-family:var(--display);font-weight:800;font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.02em;line-height:1.1;margin-bottom:24px">準備好強化您的防線了嗎？</h2>
@@ -467,7 +558,10 @@ let maxScroll=0;
 function calcMax(){maxScroll=document.documentElement.scrollHeight-innerHeight;}
 addEventListener('resize',calcMax,{passive:true});addEventListener('load',calcMax);calcMax();
 
-function countUp(el){const to=+el.dataset.count,suf=el.dataset.suffix||'';let s=null;
+const noMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function countUp(el){const to=+el.dataset.count,suf=el.dataset.suffix||'';
+  if(noMotion){el.textContent=to+suf;return;}
+  let s=null;
   (function st(ts){if(!s)s=ts;const k=Math.min(1,(ts-s)/1300),e=1-Math.pow(1-k,3);
     el.textContent=Math.round(to*e)+suf;if(k<1)requestAnimationFrame(st);})(performance.now());}
 let counts=[...document.querySelectorAll('[data-count]')];
@@ -490,6 +584,16 @@ document.querySelectorAll('.nav-cta').forEach(b=>{
     b.style.transform=`translate(${(e.clientX-(r.left+r.width/2))*.2}px,${(e.clientY-(r.top+r.height/2))*.3}px)`;});
   b.addEventListener('mouseleave',()=>b.style.transform='');
 });
+
+/* mobile nav */
+const navToggle=document.getElementById('navToggle'),mnav=document.getElementById('mnav');
+function setMnav(open){
+  mnav.classList.toggle('open',open);
+  navToggle.setAttribute('aria-expanded',open);
+  navToggle.setAttribute('aria-label',open?'關閉選單':'開啟選單');
+}
+navToggle.addEventListener('click',()=>setMnav(!mnav.classList.contains('open')));
+mnav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMnav(false)));
 
 document.getElementById('yr').textContent=new Date().getFullYear();
 </script>
